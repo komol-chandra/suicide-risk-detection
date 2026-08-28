@@ -1,0 +1,4 @@
+data-collection/input/**/*.html
+data-collection/codebase/__pycache__/
+*.pyc
+.claude/

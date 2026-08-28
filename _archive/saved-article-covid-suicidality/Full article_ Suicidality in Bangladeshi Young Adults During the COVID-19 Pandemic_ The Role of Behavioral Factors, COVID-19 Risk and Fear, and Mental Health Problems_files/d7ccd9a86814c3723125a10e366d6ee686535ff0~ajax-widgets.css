@@ -1,0 +1,1 @@
+.loading-spinner{position:relative;-webkit-animation:fa-spin 1.1s infinite ease;animation:fa-spin 1.5s infinite ease;color:#10147e;display:block;width:80px;height:80px;margin:80px auto;font:normal normal normal 80px/1 FontAwesome}.loading-spinner:before{content:"\f110"}

@@ -1,0 +1,2 @@
+Wrote 10066 row(s) to ../database/phase-1/suicide_data.csv
+Columns needing manual review: family_members, position_in_siblings, maritual_status, duration_of_separataion, financial_condition, previous_health_condition, reason_description (see the _evidence_* columns for the source sentence).
