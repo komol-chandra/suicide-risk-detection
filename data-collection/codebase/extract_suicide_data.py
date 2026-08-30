@@ -48,9 +48,15 @@ from datetime import datetime
 
 from bs4 import BeautifulSoup
 
+# TODO:: make all const data in a saprted way ; for daynamic use case; 
+# i want to make my Banglaseh map in a haxa gonal ship; to make a in build map structue data for eture;
+# so like if serch for mirpur need to show acture data ; like this type of correnct serching in this dataabse;
+# 1. TODO::  Need to make this data set [positive, netural, negative] with rating 1-5 start; 
+
 # ---------------------------------------------------------------------------
 # 1. District-level centroid lookup (approximate, public geographic data —
 #    NOT an exact home address). Extend this as needed.
+# TODO:: Need Full BD country wish Division, District, Sub District, Gram, wish location map ; use proper saparted loaction related database for re use in this type of work;
 # ---------------------------------------------------------------------------
 DISTRICT_CENTROIDS = {
     "ঢাকা": (23.8103, 90.4125), "মানিকগঞ্জ": (23.8617, 90.0047),
@@ -67,6 +73,8 @@ DISTRICT_CENTROIDS = {
 # ---------------------------------------------------------------------------
 # 2. Keyword dictionaries used for coarse, category-level extraction only.
 # ---------------------------------------------------------------------------
+
+
 METHOD_KEYWORDS = {
     "hanging": ["ফাঁস দিয়ে", "ঝুলন্ত", "গলায় ফাঁস"],
     "poison": ["বিষপান", "বিষ খেয়ে", "কীটনাশক"],
@@ -77,6 +85,8 @@ METHOD_KEYWORDS = {
     "self_immolation": ["আগুনে পুড়ে", "গায়ে আগুন"],
 }
 
+# TODO:: make METHOD_KEYWORDS for 1. postive, negatiove, netural 
+
 REASON_KEYWORDS = {
     "mental_health": ["মানসিক সমস্যা", "মানসিক অসুস্থতা", "বিষণ্নতা"],
     "family_conflict": ["পারিবারিক কলহ", "পারিবারিক অশান্তি"],
@@ -85,6 +95,7 @@ REASON_KEYWORDS = {
     "financial": ["আর্থিক সংকট", "ঋণের কারণে"],
     "domestic_abuse": ["যৌতুক", "নির্যাতনের"],
 }
+# TODO:: make REASON_KEYWORDS for 1. postive, negatiove, netural 
 
 PROFESSION_KEYWORDS = {
     "student": ["ছাত্র", "ছাত্রী", "শিক্ষার্থী"],
@@ -95,6 +106,8 @@ PROFESSION_KEYWORDS = {
     "farmer": ["কৃষক"],
     "garments_worker": ["পোশাক শ্রমিক", "গার্মেন্টস কর্মী"],
 }
+
+# TODO:: make a max use propession keysowrd; up to 50 ; use saparted file for it;
 
 GENDER_HINTS = {
     "female": ["শিক্ষিকা", "গৃহবধূ", "ছাত্রী", "স্ত্রী", "কন্যা", "নারী", "মেয়ে"],
