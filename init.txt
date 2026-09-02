@@ -1,0 +1,68 @@
+graph LR
+    %% Theme and Styling Config
+    classDef mainContainer fill:#F5F0FF,stroke:#6B46C1,stroke-width:2px,color:#2D3748,font-weight:bold;
+    classDef subBlock fill:#FFFFFF,stroke:#9F7AEA,stroke-width:1.5px,color:#1A202C,rx:6px,ry:6px;
+    classDef headerNode fill:#9F7AEA,stroke:#6B46C1,color:#FFFFFF,font-weight:bold,rx:6px,ry:6px;
+
+    %% Section 1: Data Ingestion & Preprocessing
+    subgraph S1 [" Section 1: Data Ingestion & Preprocessing "]
+        direction TB
+        S1_H["🌐 Ingestion Engine"]
+        S1_A["📰 South Asian News Scraping<br/><i>(India, Pakistan, BD, Sri Lanka, Nepal, etc.)</i>"]
+        S1_B["🗣️ Language Detection & Translation"]
+        S1_C["🧹 Text Normalization & Deduplication"]
+        
+        S1_H --> S1_A --> S1_B --> S1_C
+    end
+
+    %% Section 2: Imputation & Feature Extraction
+    subgraph S2 [" Section 2: Imputation & Feature Extraction "]
+        direction TB
+        S2_H["⚙️ Feature Extraction"]
+        S2_A["📊 Statistical Imputation<br/><i>(MissForest, MICE, KNN)</i>"]
+        S2_B["🧠 Multilingual LLM Inference<br/><i>(Llama-3, IndicBERT, Gemini)</i>"]
+        S2_C["🏷️ Cross-Cultural Feature Engineering<br/><i>(Regional Triggers & Demographics)</i>"]
+        
+        S2_H --> S2_A --> S2_B --> S2_C
+    end
+
+    %% Section 3: Cross-Regional Clustering
+    subgraph S3 [" Section 3: Cross-Regional Clustering "]
+        direction TB
+        S3_H["🧩 Clustering Engine"]
+        S3_A["🔢 Dense Vector Embeddings"]
+        S3_B["📉 Clustering Algorithms<br/><i>(Agglomerative, K-Means, DBSCAN)</i>"]
+        S3_C["📌 Topic Modeling<br/><i>(BERTopic / LLM Thematics)</i>"]
+        
+        S3_H --> S3_A --> S3_B --> S3_C
+    end
+
+    %% Section 4: Risk Scoring & Validation
+    subgraph S4 [" Section 4: Risk Scoring & Validation "]
+        direction TB
+        S4_H["🛡️ Validation & Scoring"]
+        S4_A["🎯 Fine-Tuned LLM Risk Classifier"]
+        S4_B["📂 Regional Trigger Categorization<br/><i>(Farm Distress, Dowry, Academic, Economic)</i>"]
+        S4_C["⚖️ Cluster Validation<br/><i>(Custom Balance Metric)</i>"]
+        
+        S4_H --> S4_A --> S4_B --> S4_C
+    end
+
+    %% Section 5: Policy Insights & Dashboard
+    subgraph S5 [" Section 5: Policy Insights & Dashboard "]
+        direction TB
+        S5_H["📊 Insights Output"]
+        S5_A["🖥️ South Asian Health Dashboard"]
+        S5_B["🗺️ Cross-Border Heatmaps"]
+        S5_C["🤝 NGO & Policy Recommendations"]
+        
+        S5_H --> S5_A --> S5_B --> S5_C
+    end
+
+    %% Connections between main sections
+    S1 --> S2 --> S3 --> S4 --> S5
+
+    %% Apply Classes
+    class S1,S2,S3,S4,S5 mainContainer;
+    class S1_A,S1_B,S1_C,S2_A,S2_B,S2_C,S3_A,S3_B,S3_C,S4_A,S4_B,S4_C,S5_A,S5_B,S5_C subBlock;
+    class S1_H,S2_H,S3_H,S4_H,S5_H headerNode;

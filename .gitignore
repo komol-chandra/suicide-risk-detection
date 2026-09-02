@@ -1,4 +1,5 @@
 data-collection/input/**/*.html
 data-collection/codebase/__pycache__/
+data-collection/.venv/
 *.pyc
 .claude/
